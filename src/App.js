@@ -33,21 +33,17 @@ export default function App() {
                 <Link to="/Education">Education</Link>
               </li>
               <li>
-                <Link to="/ProfExperience" className="content">
-                  Prof. Experience
-                </Link>
+                <Link to="/ProfExperience">Prof. Experience</Link>
               </li>
               <li>
-                <Link to="/Contact" className="content">
-                  Contact{" "}
-                </Link>
+                <Link to="/Contact">Contact</Link>
               </li>
             </ul>
           </div>
+          {/* Switching begans */}
           <Switch>
             <Route exact path="/Education">
               <div className="content">
-                {" "}
                 <Education />
               </div>
             </Route>
