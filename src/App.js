@@ -1,3 +1,9 @@
+import React from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Education from "./Components/Education";
+import ProfExperience from "./Components/ProfExperience";
+import Contact from "./Components/Contact";
+
 import "./styles.css";
 
 export default function App() {
@@ -5,38 +11,58 @@ export default function App() {
     <div id="container">
       <header>
         <div className="quoteoftheday">Profile</div>
-        <div className="name">Shah.</div>
+        <div className="name">Waleed.</div>
       </header>
 
       <article>
         <div className="quote">
-          <h1>A Coders Life: Problematic but Charismatic.</h1>
+          <h1>Everyones alive, but only some are living.</h1>
         </div>
 
         <div className="quoteby">
-          <h4>Shahzaib Khan</h4>
+          <h4>Waleed Javed</h4>
         </div>
       </article>
 
       <footer>
-        <div className="skills">
-          <h6>Menu</h6>
-          <ul>
-            <li>Education</li>
-            <li>Professional Experience</li>
-            <li>Contact</li>
-          </ul>
-        </div>
-
-        <div className="content">
-          <p>
-            A technologist &amp; entrepreneur, specialized in using cutting-edge
-            web technologies &amp; social-media strategies to bring products
-            &amp; campaigns from concept to a reality. By profession a Computer
-            &amp; Information System Engineer, who has been building &amp;
-            implementing Information Systems for the last 10 years.
-          </p>
-        </div>
+        <Router>
+          <div className="skills">
+            <h6>Menu</h6>
+            <ul>
+              <li>
+                <Link to="/Education">Education</Link>
+              </li>
+              <li>
+                <Link to="/ProfExperience" className="content">
+                  Prof. Experience
+                </Link>
+              </li>
+              <li>
+                <Link to="/Contact" className="content">
+                  Contact{" "}
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <Switch>
+            <Route exact path="/Education">
+              <div className="content">
+                {" "}
+                <Education />
+              </div>
+            </Route>
+            <Route exact path="/ProfExperience">
+              <div className="content">
+                <ProfExperience />
+              </div>
+            </Route>
+            <Route exact path="/Contact">
+              <div className="content">
+                <Contact />
+              </div>
+            </Route>
+          </Switch>
+        </Router>
       </footer>
     </div>
   );
