@@ -1,3 +1,8 @@
+import Profile from "./Profile";
 export default function Education() {
-  return <div>Education</div>;
+  return (
+    <div>
+      <Profile />
+    </div>
+  );
 }
