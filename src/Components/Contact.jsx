@@ -15,11 +15,11 @@ function SocialLinks() {
       Connect on:
       <ul>
         <li>
-          Linkedin @
+          <p>Linkedin @</p>
           <a href="http://www.Linkedin.com/in/waleed-javed">Waleed-Javed</a>
         </li>
         <li>
-          Instagram @
+          <p>Instagram @</p>
           <a href="https://www.instagram.com/pistalavista/">Waleed-Javed</a>
         </li>
       </ul>

@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Education from "./Components/Education";
 import ProfExperience from "./Components/ProfExperience";
 import Contact from "./Components/Contact";
-
+import Introduction from "./Components/Introduction";
 import "./styles.css";
 
 export default function App() {
@@ -11,7 +11,7 @@ export default function App() {
     <div id="container">
       <header>
         <div className="quoteoftheday">Profile</div>
-        <div className="name">Waleed.</div>
+        <div className="name">WJ.</div>
       </header>
 
       <article>
@@ -30,6 +30,9 @@ export default function App() {
             <h6>Menu</h6>
             <ul>
               <li>
+                <Link to="/Introduction">Introduction</Link>
+              </li>
+              <li>
                 <Link to="/Education">Education</Link>
               </li>
               <li>
@@ -42,6 +45,12 @@ export default function App() {
           </div>
           {/* Switching begans */}
           <Switch>
+            <Route exact path="/Introduction">
+              <div className="content">
+                <Introduction />
+              </div>
+            </Route>
+
             <Route exact path="/Education">
               <div className="content">
                 <Education />

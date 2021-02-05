@@ -71,6 +71,17 @@ article {
   margin: 0px;
 }
 
+.content span {
+  border-radius: 5px;
+  padding: 0px 2px;
+  /* font-size: 19px; */
+  /* padding-right: 27px; */
+  font-weight: 700;
+  /* margin: 0px; */
+  background-color: green;
+  color: #fff;
+}
+
 .skills h6 {
   font-size: 12px;
   margin: 0px;
